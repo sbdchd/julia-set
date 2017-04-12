@@ -36,7 +36,7 @@ fn main() {
             // guesswork to make the rgb color values look okay
             let r = (i << 3) as u8;
             let g = (i << 5) as u8;
-            let b = (i << 4) as u8;
+            let b = (i * 4) as u8;
             let pixel = Rgb::from_channels(r, g, b, 0);
             img.put_pixel(x as u32, y as u32, pixel);
         }
